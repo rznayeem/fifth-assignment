@@ -6,3 +6,7 @@
 .inter-font {
   font-family: 'Inter', sans-serif;
 }
+#price-list td {
+  display: flex;
+  justify-content: space-between;
+}
