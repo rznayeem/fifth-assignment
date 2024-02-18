@@ -5,10 +5,14 @@ function setBgColorByID(elementId) {
 function setTextById(elementId) {
   const element = document.getElementById(elementId);
   const elementText = parseInt(element.innerText);
-  const setElementText = elementText + 1;
-  if (elementText < 4) {
-    element.innerText = setElementText;
-  }
+  const setElementText = elementText - 1;
+  element.innerText = setElementText;
+}
+function setTotalPriceById(elementId) {
+  const element = document.getElementById(elementId);
+  const elementText = parseInt(element.innerText);
+  const setElementText = elementText + 550;
+  element.innerText = setElementText;
 }
 function enableButtonById(elementId) {
   const element = document.getElementById(elementId);

@@ -76,7 +76,7 @@
             <p>use by January 2024</p>
           </div>
           <div class="raleway-font">
-            <h2 class="text-4xl font-bold">NEW15</h2>
+            <h2 id="first-coupon" class="text-4xl font-bold">NEW15</h2>
             <p>Coupon Code</p>
           </div>
         </div>
@@ -88,7 +88,7 @@
             <p>use by January 2024</p>
           </div>
           <div class="raleway-font">
-            <h2 class="text-3xl font-bold">Couple 20</h2>
+            <h2 id="second-coupon" class="text-3xl font-bold">Couple 20</h2>
             <p>Coupon Code</p>
           </div>
         </div>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="flex items-center justify-center text-[#1DD100] bg-[#1DD10026] inter-font px-4 rounded-lg">
                   <img src="./images/seat-green.png" alt="">
-                  <p><span>40</span> Seats left</p>
+                  <p><span id="seats-left">40</span> Seats left</p>
                 </div>
               </div>
               <div class="bg-[#F7F8F8] rounded-3xl  p-8 mt-6 space-y-6">
@@ -356,10 +356,14 @@
               <hr>
               <div class="flex justify-between">
                 <h4>Total Price</h4>
-                <p>BDT <Span>0</Span></p>
+                <p>BDT <Span id="total-price">0</Span></p>
+              </div>
+              <div id="discount-container" class="flex justify-between hidden">
+                <h4>Discount Price</h4>
+                <p>BDT <Span id="discount-price">0</Span></p>
               </div>
               <label class="input w-auto h-auto outline-none rounded-xl flex items-center gap-2">
-                <input type="text" class="grow" placeholder="Search" />
+                <input id="coupon-input" type="text" class="grow" placeholder="Search" value="" />
                 <button id="apply-btn" class="btn bg-[#1DD100] text-white font-semibold -mr-2 my-2 rounded-lg py-2 px-5"
                   disabled>Apply</button>
               </label>
