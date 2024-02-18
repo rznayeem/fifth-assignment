@@ -1,6 +1,7 @@
 function setBgColorByID(elementId) {
   elementId.classList.toggle('bg-[#F7F8F8]');
   elementId.classList.toggle('bg-[#1DD100]');
+  elementId.classList.toggle('text-white');
 }
 function setTextById(elementId) {
   const element = document.getElementById(elementId);
