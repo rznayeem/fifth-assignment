@@ -26,6 +26,7 @@ for (const seat of seats) {
       setBgColorByID(selectedSeat);
       setTextById('seats-left');
       setTotalPriceById('total-price');
+      setTotalPriceById('grand-total');
     } else {
       alert("You can't buy more than 4 tickets!");
     }
@@ -37,10 +38,39 @@ document.getElementById('coupon-input').addEventListener('keyup', function (e) {
   if (seatArray.length === 4) {
     const firstCoupon = e.target.value;
     document.getElementById('apply-btn').addEventListener('click', function () {
+      console.log('clicked');
       if (firstCoupon === 'NEW15') {
-        const discountPrice = document.getElementById('discount-container');
-        discountPrice.classList.remove('hidden');
+        const discountContainer = document.getElementById('discount-container');
+        discountContainer.classList.remove('hidden');
+        const element = parseFloat(
+          document.getElementById('total-price').innerText
+        );
+        const discountPrice = document.getElementById('discount-price');
+        discountPrice.innerText = element * (15 / 100);
+        const grandTotal = document.getElementById('grand-total');
+        grandTotal.innerText = element - discountPrice.innerText;
+        document.getElementById('apply-btn').disabled = true;
+      } else if (firstCoupon === 'Couple 20') {
+        const discountContainer = document.getElementById('discount-container');
+        discountContainer.classList.remove('hidden');
+        const element = parseFloat(
+          document.getElementById('total-price').innerText
+        );
+        const discountPrice = document.getElementById('discount-price');
+        discountPrice.innerText = element * (20 / 100);
+        const grandTotal = document.getElementById('grand-total');
+        grandTotal.innerText = element - discountPrice.innerText;
+        document.getElementById('apply-btn').disabled = true;
       }
     });
+  }
+});
+document.getElementById('number-input').addEventListener('keyup', function (e) {
+  const numberInputValue = e.target.value;
+  if (seatArray.length > 0 && !isNaN(numberInputValue) === true) {
+    enableButtonById('next-btn');
+    console.log(seatArray.length);
+  } else {
+    document.getElementById('next-btn').disabled = true;
   }
 });

@@ -18,13 +18,16 @@ function enableButtonById(elementId) {
   const element = document.getElementById(elementId);
   element.removeAttribute('disabled');
 }
+function disableButtonById(elementId) {
+  const element = document.getElementById(elementId);
+  element.setAttribute('disabled');
+}
 function setElementsById(elementId, value) {
   const element = document.getElementById(elementId);
   const td = document.createElement('td');
   const p1 = document.createElement('p');
   const p2 = document.createElement('p');
   const p3 = document.createElement('p');
-
   p1.innerText = value;
   p2.innerText = 'Economoy';
   p3.innerText = 550;
@@ -33,3 +36,4 @@ function setElementsById(elementId, value) {
   td.appendChild(p3);
   element.appendChild(td);
 }
+function setDiscountPrice(elementId, secondElementId) {}
