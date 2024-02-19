@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Buy Tickets</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-  <header class="max-w-[1171px] mx-auto raleway-font">
+  <header class="max-w-[1171px] mx-auto raleway-font p-6 lg:p-0">
     <nav class="mt-14">
       <div class="navbar bg-base-100">
         <div class="navbar-start">
@@ -23,15 +23,10 @@
               </svg>
             </div>
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
             </ul>
           </div>
           <a class="text-4xl btn btn-ghost font-extrabold">P-Ticket</a>
@@ -51,21 +46,19 @@
       </div>
     </nav>
     <section
-      class="flex flex-col justify-center items-center hero-section bg-[url(./images/banner.png)]  bg-cover bg-no-repeat min-h-[550px] space-y-4 mt-9">
-      <h1 class="text-center text-[64px] text-white font-extrabold">End-to-End Travel with <br> <span
+      class="flex flex-col p-5 justify-center items-center hero-section bg-[url(./images/banner.png)] rounded-2xl bg-center bg-cover bg-no-repeat lg:min-h-[550px] space-y-4 mt-9">
+      <h1 class="text-center lg:text-[64px] text-[40px] text-white font-extrabold">End-to-End Travel with <br> <span
           class="text-[#1DD100]">P Paribahan</span></h1>
-      <p class="text-center text-white">Yes, you can run unit tests and view the results directly within the app. The
-        <br> integrated testing features
-        allow
-        for a
-        streamlined .
+      <p class="text-center text-white">Book your bus tickets hassle-free, with easy online booking and instant
+        confirmation. <br> Travel simplified!
+        We're giving best ticketing services
       </p>
       <button onclick="scrollDownByBtn()" class="btn bg-[#1DD100] font-bold text-xl border-none h-auto py-5 px-8">Buy
         Tickets</button>
     </section>
   </header>
   <main>
-    <section class="max-w-[1171px] mx-auto my-32 flex flex-col text-center">
+    <section class="max-w-[1171px] mx-auto lg:my-32 my-10 p-6 lg:p-0 flex flex-col text-center">
       <h2 class="raleway-font text-4xl font-bold pb-12">Best offers for you</h2>
       <div class="flex flex-col gap-6 lg:flex-row justify-between inter-font">
         <div
@@ -98,20 +91,18 @@
       </div>
     </section>
     <!-- ticket buying section start -->
-    <section id="buy-ticket" class="bg-[#F7F8F8] pb-24 border-t-2 border-[#1DD100] rounded-t-[88px] ">
+    <section id="buy-ticket" class="bg-[#F7F8F8] pb-24 border-t-2 border-[#1DD100] rounded-t-3xl lg:rounded-t-[88px] ">
       <div class="max-w-[1170px] mx-auto mt-28">
         <!-- ticket info container section start -->
         <div class="text-center raleway-font ">
           <h1 class="text-4xl font-bold pb-6">P.H Paribahan</h1>
-          <p class="inter-font text-[#03071299]">Yes, you can run unit tests and view the results directly within the
-            app. The integrated
-            <br>
-            testing features
-            allow for a
-            streamlined .
+          <p class="inter-font text-[#03071299]">Explore our wide range of routes, select your preferred seat, and
+            embark on your next <br> adventure stress-free!
+
+            Here you'll get cheapest rates
           </p>
           <div
-            class="bg-white rounded-3xl p-8 mt-12 flex flex-col lg:flex-row justify-between bg-[url(./images/info-devider.png)] bg-no-repeat bg-[center_right_13rem]">
+            class="bg-white rounded-3xl p-8 mt-12 flex flex-col lg:flex-row justify-between lg:bg-[url(./images/info-devider.png)] bg-no-repeat lg:bg-[center_right_13rem]">
             <!-- departure section -->
             <div class="">
               <div class="flex justify-between">
@@ -159,8 +150,8 @@
         <!-- ticket info container section end -->
 
         <!-- ticket sit plan & form section start -->
-        <div class="bg-white grid lg:grid-cols-12 rounded-3xl mt-7 p-8">
-          <div class="grid col-span-7">
+        <div class="bg-white lg:grid lg:grid-cols-12 rounded-3xl mt-7 p-8">
+          <div class="lg:grid lg:col-span-7">
             <div class="space-y-6 pr-8">
               <h3 class="text-2xl font-semibold raleway-font">Select Your Seat</h3>
               <hr class="border-dashed">
@@ -180,8 +171,8 @@
               </div>
             </div>
             <div
-              class="inter-font font-medium text-xl text-[#03071280] ml-[-32px] mt-8 grid grid-cols-7 lg:gap-20 pr-8">
-              <div class="grid col-span-4 grid-cols-3 gap-8">
+              class="inter-font font-medium text-xl text-[#03071280] ml-[-32px] mt-8 flex justify-between gap-8 lg:grid lg:grid-cols-7 lg:gap-20 lg:pr-8">
+              <div class="grid lg:col-span-4 col-span-2 grid-cols-3 gap-8">
                 <div class="flex justify-center items-center">
                   <p class="">A</p>
                 </div>
@@ -276,7 +267,7 @@
 
               <!-- second seat row -->
 
-              <div class="grid col-span-3 grid-cols-2 gap-8">
+              <div class="grid lg:col-span-3 grid-cols-2 gap-8">
                 <div id="" class="bg-[#F7F8F8] seat-selector cursor-pointer rounded-xl flex justify-center px-11 py-4">
                   <p class="">A3</p>
                 </div>
@@ -417,7 +408,8 @@
             <div class="flex justify-center w-auto h-auto m-auto">
               <form method="dialog">
                 <!-- if there is a button in form, it will close the modal -->
-                <button class="btn bg-[#27AE60] rounded-full text-white">Continue</button>
+                <button class="btn bg-[#27AE60] rounded-full text-white "
+                  onClick="window.location.reload()">Continue</button>
               </form>
             </div>
           </div>
