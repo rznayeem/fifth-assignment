@@ -38,8 +38,11 @@ document.getElementById('coupon-input').addEventListener('keyup', function (e) {
   if (seatArray.length === 4) {
     const firstCoupon = e.target.value;
     document.getElementById('apply-btn').addEventListener('click', function () {
-      console.log('clicked');
-      if (firstCoupon === 'NEW15') {
+      const newCoupon = 'NEW15';
+      if (firstCoupon === newCoupon && firstCoupon.length === 5) {
+        console.log('coupon');
+        document.getElementById('apply-btn').classList.add('hidden');
+        document.getElementById('coupon-input').classList.add('hidden');
         const discountContainer = document.getElementById('discount-container');
         discountContainer.classList.remove('hidden');
         const element = parseFloat(
@@ -51,6 +54,8 @@ document.getElementById('coupon-input').addEventListener('keyup', function (e) {
         grandTotal.innerText = element - discountPrice.innerText;
         document.getElementById('apply-btn').disabled = true;
       } else if (firstCoupon === 'Couple 20') {
+        document.getElementById('apply-btn').classList.add('hidden');
+        document.getElementById('coupon-input').classList.add('hidden');
         const discountContainer = document.getElementById('discount-container');
         discountContainer.classList.remove('hidden');
         const element = parseFloat(
